@@ -1,0 +1,24 @@
+{
+  "name": "com.bizz.request-mocker",
+  "version": "1.0.0",
+  "description": "Dynamic request mocker service, configure the HTTP requests to mock, save in Database and so much more 😁",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mock",
+    "test",
+    "api"
+  ],
+  "author": "Sarthak Biswas",
+  "license": "MIT",
+  "dependencies": {
+    "@dapr/dapr": "^3.4.1",
+    "@sequelize/postgres": "^7.0.0-alpha.43",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "uuid": "^11.0.5"
+  }
+}
