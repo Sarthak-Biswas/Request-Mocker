@@ -1,15 +1,21 @@
 import express from "express";
 import bodyParser from "body-parser";
 import { v4 as UUID } from "uuid";
+import { connect as connectToDatabase } from "./db/connection.js";
+import { router as staticRouter } from "./router/static-request-router.js"
 import checkRequestingUser from "./middleware/check-requesting-user.js";
+
+await connectToDatabase()
 
 const server = express()
 server.use(bodyParser.json())
 server.use(checkRequestingUser)
 
-server.get('/', (request, response) => {
+server.get('/test', (request, response) => {
     response.send("Hello")
 })
+
+server.use("/static", staticRouter)
 
 // server.post("/data", async (request, response) => {
     
