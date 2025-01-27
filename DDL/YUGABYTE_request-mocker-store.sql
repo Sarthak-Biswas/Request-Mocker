@@ -1,4 +1,4 @@
-create table if not exists mocker.request_mocker_store (
+create table if not exists mock.request_mocker_store (
     
     id              uuid,
     uri             text,
@@ -9,4 +9,4 @@ create table if not exists mocker.request_mocker_store (
     constraint request_mocker_pk primary key ((uri, method))
 );
 
-create index if not exists mocker.request_mocker_idx on mocker.request_mocker_store (id);
+create index if not exists request_mocker_idx on mock.request_mocker_store (id);
